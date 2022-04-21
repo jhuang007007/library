@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color:white;
+}
+
+body {
+  background-color: #2D3047;
+}
+
+.hidden {
+ display: none; 
+}
+
+.library-container {
+  display: flex;
+  justify-content: center;
+}
+
+.library {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(5, minmax(200px, 1fr));
+  gap: 10px 20px;
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.book { 
+  display: flex;
+  flex-direction: column;
+  padding: 170px 30px;
+  box-shadow: 5px 2px 5px gray;
+}
+
+.form-div {
+  display: flex;
+}
+
+h1 {
+  text-align: center;
+  padding: 50px 0;
+}
+
+p, h1, h2 ,h3 {
+  text-shadow: 0 0 5px black;
+}
+
+h2 {
+  font-style: italic;
+}
+
+h3 {
+  margin-bottom: 20px;
+}
+
+button, button[type="submit"] {
+  color:black;
+}
+
+#add-book-button, button[type="submit"] {
+  padding: 5px 10px;
+  background-color: #8fbec7;
+  border-radius: 5px;
+  border-style: none;
+  margin: 0px 40vw;
+}
+
+.toggle-read, .delete-book {
+  padding: 5px 10px;
+  background-color: #8fbec7;
+  border-style: none;
+  border-radius: 5px;
+}
+
+#add-book-button:hover, button[type="submit"]:hover, .toggle-read:hover, .delete-book:hover {
+  background-color: #acd5dd;
+}
+
+#add-book-button:active, button[type="submit"]:active, .toggle-read:active, .delete-book:active {
+  background-color: #64939c;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-div > * {
+  margin: 2px 0px;
+}
+
+input[type="text"], input[type="number"], #read {
+  margin: 0px 30vw;
+  color: black;
+  font-size: 18px;
+  padding: 10px 0px;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
+  <title>Library</title>
+</head>
+<body>
+
+  <h1>Library</h1>
+
+  <div class="library-container">
+    <div class="library">
+    </div>
+  </div>
+
+  <div class="container">
+    <button type="button" id="add-book-button">Add new book</button>
+    <form id="add-book-form" class="hidden" action="" method="GET">
+      <div class="form-div">
+        <label for="author">Author</label>
+        <input id="author" name="author" type="text" minlength="1" required/>
+      </div>
+      <div class="form-div">
+        <label for="title">Title</label>
+        <input id="title" name="title" type="text" minlength="1" required/>
+      </div>
+      <div class="form-div">
+        <label for="pages">Pages</label>
+        <input id="pages" name="pages" type="number" min="1" max="99999999" required/>
+      </div>
+      <div class="form-div">
+        <label for="read">Status</label>
+        <select name="read" id="read" required>
+          <option value="true">Read</option>
+          <option value="false">Unread</option>
+        </select>
+      </div>
+      <div class="form-div">
+        <button type="submit" name="submit" id="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+  
+  
+</body>
+
+</html>
