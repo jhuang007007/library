@@ -60,11 +60,13 @@ button, button[type="submit"] {
 }
 
 #add-book-button, button[type="submit"] {
-  padding: 5px 10px;
+  padding: 15px 10px;
   background-color: #8fbec7;
   border-radius: 5px;
   border-style: none;
-  margin: 0px 40vw;
+  margin: 15px 40vw;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .toggle-read, .delete-book {
@@ -72,6 +74,7 @@ button, button[type="submit"] {
   background-color: #8fbec7;
   border-style: none;
   border-radius: 5px;
+  margin-top: 10px;
 }
 
 #add-book-button:hover, button[type="submit"]:hover, .toggle-read:hover, .delete-book:hover {
@@ -105,9 +108,10 @@ input[type="text"], input[type="number"], #read {
   color: black;
   font-size: 18px;
   padding: 10px 0px;
+  border-radius: 5px;
 }
 
-input:invalid {
+input:invalid:focus {
   border: 1px solid red;
 }
 

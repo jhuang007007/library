@@ -75,20 +75,24 @@ function displayBooks() {
     //toggle read status
     readButton.addEventListener("click", () => {
       book.toggleRead();
-      read.textContent = book.read ? "Read":"Unread";
+      read.textContent = book.read ? "Status: Read":"Status: Unread";
     });
 
+    //delete book from DOM and myLibrary array
     deleteButton.addEventListener("click", () => {
       myLibrary.splice(book.index, 1);
-
+      newBook.remove(title);
+      newBook.remove(author);
+      newBook.remove(pages);
+      newBook.remove(read);
+      newBook.remove(readButton);
+      newBook.remove(deleteButton);
     });
   });
 }
 
 //adds book to libary on submit button click
-document.addEventListener('DOMContentLoaded', ()=>{
-  document.querySelector('button[type="submit"]').addEventListener('click', addBookToLibrary)
-})
+document.getElementById('add-book-form').onsubmit = addBookToLibrary; 
 
 //unhide form on "add new book" button click
 document.querySelector('#add-book-button').addEventListener("click", addNewBookEventHandler)
@@ -102,5 +106,3 @@ function addNewBookEventHandler() {
     document.querySelector('#add-book-button').textContent = "Add new book"
   }
 }
-
-// Add a button on each book’s display to remove the book from the library. 
